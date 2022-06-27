@@ -177,13 +177,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 							// Detect language from text or use `auto` if support
 							getLang() {
 								// Set detected lang if found
-								if (detectedLanguage !== null) return detectedLanguage;
-
-								// Set `auto` if support and enable
-								if (isUseAutoForDetectLang && isSupportAutodetect)
-									return 'auto';
-
-								return;
+								return 'auto';
 							},
 							priority: 0,
 						},
@@ -201,9 +195,7 @@ export const SelectTranslatorComponent: FC<SelectTranslatorComponentProps> = ({
 						{
 							// Default value. Auto detect if supported, first lang otherwise
 							getLang() {
-								return isSupportAutodetect
-									? 'auto'
-									: supportedLanguages[0];
+								return 'auto';
 							},
 							priority: -1,
 						},
