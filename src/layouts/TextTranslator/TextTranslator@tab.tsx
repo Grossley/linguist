@@ -121,9 +121,7 @@ export const TextTranslatorTab: TabComponent<InitFn<InitData>> = ({
 };
 
 TextTranslatorTab.init = async ({ translatorFeatures, config }) => {
-	let from = translatorFeatures.isSupportAutodetect
-		? 'auto'
-		: translatorFeatures.supportedLanguages[0];
+	let from = 'auto';
 	let to = config.language;
 
 	// Try recovery state

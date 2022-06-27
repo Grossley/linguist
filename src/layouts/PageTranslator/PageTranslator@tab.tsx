@@ -354,9 +354,7 @@ PageTranslatorTab.init = async ({ translatorFeatures, config }): Promise<InitDat
 
 	// Set default lang directions
 	if (from === null) {
-		from = translatorFeatures.isSupportAutodetect
-			? 'auto'
-			: translatorFeatures.supportedLanguages[0];
+		from = 'auto';
 	}
 
 	if (to === null) {
